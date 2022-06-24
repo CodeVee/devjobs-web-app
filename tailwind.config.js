@@ -53,6 +53,10 @@ module.exports = {
       borderRadius: {
         2: '2rem',
         2.4: '2.4rem',
+      },
+      backgroundImage: {
+        'header-desktop': "url('/assets/desktop/bg-pattern-header.svg')",
+        'header-mobile': "url('/assets/desktop/bg-pattern-header.svg')",
       }
     },
   },

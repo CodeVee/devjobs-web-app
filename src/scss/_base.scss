@@ -46,10 +46,16 @@ html, body {
     content: "";
     height: 1.4rem;
     width: 1.4rem;
-    top: .3rem;
-    background-color: $white;
+    top: .5rem;
+    background-color: $violet;
     border-radius: 50%;
     transition: .5s;
+  }
+
+  &:hover {
+    label::after {
+      background-color: $light-violet;
+    }
   }
 
   input[type="checkbox"]:checked + label, .move {
