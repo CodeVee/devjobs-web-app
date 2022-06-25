@@ -20,13 +20,11 @@ export class JobService {
     }
 
     return this.http.get<Job[]>(this.jsonURL)
-    .pipe(tap(res => this.jobs = res));
+    .pipe(tap(jobs => this.jobs = jobs));
   }
 
-  getJob(jobId: string): Observable<Job> {
-    console.log(jobId);
-
-    const job = this.jobs.find(c => true)!;
+  getJob(jobId: number): Observable<Job> {
+    const job = this.jobs.find(c => c.id === jobId)!;
     return of(job)
   }
 }

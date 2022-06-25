@@ -6,12 +6,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
+import { JobCardComponent } from './components/job-card/job-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppRoutingModule.components,
     HeaderComponent,
+    JobCardComponent,
   ],
   imports: [
     BrowserModule,
