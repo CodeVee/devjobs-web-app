@@ -1,0 +1,63 @@
+<ng-container *ngIf="job">
+  <div class=" w-cm mx-auto">
+    <div class=" bg-white dark:bg-blue-vdark flex h-56 rounded-0.6 mb-3.2">
+      <figure [ngStyle]="{background: job.logoBackground}" class=" h-full w-56 flex items-center justify-center rounded-tl-0.6 rounded-bl-0.6">
+        <img [src]="job.logo" [alt]="job.company" class=" scale-[2]">
+      </figure>
+      <div class=" flex-1 pl-16 pr-[4.3rem] flex items-center justify-between">
+        <div class="">
+          <h2 class=" text-blue-vdark dark:text-white font-bold text-lx leading-lx mb-[1.3rem]">{{job.company}}</h2>
+          <h3 class=" text-grey-dark font-normal text-md leading-ms">{{job.website}}</h3>
+        </div>
+        <a [href]="job.website" class="btn-secondary dark:btn-secondary-dark w-[14.7rem]" target="_blank">Company Site</a>
+      </div>
+    </div>
+    <div class=" bg-white dark:bg-blue-vdark py-4.8 pl-4.8 pr-[4.3rem] rounded-0.6">
+      <div class="flex justify-between mb-16">
+        <div>
+          <div class=" text-grey-dark font-normal text-md leading-ms mb-0.8 flex">
+            <span>{{job.postedAt}}</span>
+            <span class=" mb-[0.3rem] self-end h-2 w-2 rounded-full bg-grey-dark mx-1.2"></span>
+            <span>{{job.contract}}</span>
+          </div>
+          <h4 class=" font-bold text-xl leading-xl text-blue-vdark dark:text-white mb-[1.4rem]">{{job.position}}</h4>
+          <h5 class=" font-bold text-violet text-sm leading-sm">{{job.location}}</h5>
+        </div>
+        <a [href]="job.apply" target="_blank" class="btn-primary w-[14.1rem] self-center">Apply Now</a>
+      </div>
+      <p class="font-normal text-grey-dark text-md leading-md mb-16">
+        {{job.description}}
+      </p>
+      <h6 class=" font-bold text-lg leading-lg text-blue-vdark dark:text-white mb-[2.8rem]">Requirements</h6>
+      <p class="font-normal text-grey-dark text-md leading-md mb-2.4">
+        {{job.requirements.content}}
+      </p>
+      <div class=" font-normal text-grey-dark text-md leading-md mb-4.8 flex flex-col gap-y-0.8">
+        <div *ngFor="let item of job.requirements.items" class=" flex gap-3.2 min-h-[2.6rem]">
+          <span class=" mt-4 h-0.4 w-0.4 rounded-full bg-violet"></span>
+          <span>{{item}}</span>
+        </div>
+      </div>
+      <h6 class=" font-bold text-lg leading-lg text-blue-vdark dark:text-white mb-[2.8rem]">What You Will Do</h6>
+      <p class="font-normal text-grey-dark text-md leading-md mb-2.4">
+        {{job.role.content}}
+      </p>
+      <div class=" font-normal text-grey-dark text-md leading-md flex flex-col gap-y-0.8">
+        <div *ngFor="let item of job.role.items; let i=index;" class=" flex gap-3.2 min-h-[2.6rem]">
+          <span class=" font-bold text-violet">{{i + 1}}</span>
+          <span>{{item}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" bg-white dark:bg-blue-vdark h-[9.6rem] mt-32">
+    <div class=" w-cm mx-auto flex justify-between items-center h-full">
+      <div>
+        <h6 class=" font-bold text-lg leading-lg text-blue-vdark dark:text-white mb-1.2">{{job.position}}</h6>
+        <h6 class=" font-normal text-grey-dark text-md leading-ms">{{job.company}}</h6>
+      </div>
+      <a [href]="job.apply" target="_blank" class="btn-primary w-[14.1rem] self-center">Apply Now</a>
+    </div>
+  </div>
+</ng-container>
+

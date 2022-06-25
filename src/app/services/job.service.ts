@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import { switchMap, tap } from 'rxjs/operators';
 import { Job } from '../models/job.model';
 
 @Injectable({
@@ -24,8 +24,12 @@ export class JobService {
   }
 
   getJob(jobId: number): Observable<Job> {
-    const job = this.jobs.find(c => c.id === jobId)!;
-    return of(job)
+    const job = this.jobs.find(c => c.id === jobId);
+    if (job) {
+      return of(job);
+    }
+
+    return this.getJobs().pipe(switchMap(jobs => of(jobs.find(c => c.id === jobId)!)))
   }
 }
 

@@ -37,6 +37,7 @@ module.exports = {
     },
     extend: {
       spacing: {
+        0.4: '0.4rem',
         0.8: '0.8rem',
         1.2: '1.2rem',
         1.6: '1.6rem',
@@ -44,10 +45,10 @@ module.exports = {
         3.2: '3.2rem',
         4.8: '4.8rem',
         ct: '111rem',
+        cm: '73rem',
       },
       borderRadius: {
-        2: '2rem',
-        2.4: '2.4rem',
+        0.6: '0.6rem',
       },
       backgroundImage: {
         'header-desktop': "url('/assets/desktop/bg-pattern-header.svg')",

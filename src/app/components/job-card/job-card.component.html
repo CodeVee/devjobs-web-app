@@ -1,4 +1,4 @@
-<div class="px-3.2 pb-3.2 pt-[4.9rem] bg-white dark:bg-blue-vdark rounded-lg relative">
+<div class="px-3.2 pb-3.2 pt-[4.9rem] bg-white dark:bg-blue-vdark rounded-0.6 relative">
   <figure [ngStyle]="{background: job.logoBackground}" class=" absolute -top-10 h-20 w-20 rounded-3xl flex items-center justify-center">
     <img [src]="job.logo" [alt]="job.company">
   </figure>
@@ -7,7 +7,7 @@
     <span class=" mb-[0.3rem] self-end h-2 w-2 rounded-full bg-grey-dark mx-1.2"></span>
     <span>{{job.contract}}</span>
   </div>
-  <a [routerLink]="['jobs', job.id]" class=" inline-block font-bold text-lg leading-lg text-blue-vdark dark:text-white hover:text-grey-dark hover:dark:text-grey-dark mb-[1.7rem]">{{job.position}}</a>
+  <a [routerLink]="['/jobs', job.id]" class=" inline-block font-bold text-lg leading-lg text-blue-vdark dark:text-white hover:text-grey-dark hover:dark:text-grey-dark mb-[1.7rem]">{{job.position}}</a>
   <h3 class="text-grey-dark font-normal text-md leading-ms mb-[4.4rem]">{{job.company}}</h3>
   <h4 class=" font-bold text-violet text-sm leading-sm">{{job.location}}</h4>
 </div>

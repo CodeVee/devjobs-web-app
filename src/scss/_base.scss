@@ -10,10 +10,10 @@
     @apply btn bg-violet text-white hover:bg-violet-light;
   }
   .btn-secondary {
-    @apply btn bg-violet/10 text-violet hover:bg-violet/[35];
+    @apply btn bg-violet/10 text-violet hover:bg-violet/[0.35];
   }
   .btn-secondary-dark {
-    @apply btn bg-white/10 text-white hover:bg-white/[35];
+    @apply btn bg-white/10 text-white hover:bg-white/[0.35];
   }
 
 }
