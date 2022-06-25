@@ -1,3 +1,7 @@
-<div class=" pt-40 grid grid-cols-3 gap-x-12 gap-y-[6.5rem]">
-  <app-job-card *ngFor="let job of jobs$ | async" [job]="job"></app-job-card>
+<app-search-bar (filterChange)="filterJobs($event)"></app-search-bar>
+<div class=" mt-[10.5rem] grid grid-cols-3 gap-x-12 gap-y-[6.5rem]">
+  <app-job-card *ngFor="let job of filteredJobs" [job]="job"></app-job-card>
+</div>
+<div class=" flex justify-center mt-[5.6rem]">
+  <button class=" btn-primary w-[14.1rem]">Load More</button>
 </div>

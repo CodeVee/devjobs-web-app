@@ -11,7 +11,7 @@ import { ThemeService } from 'src/app/services/theme.service';
 })
 export class HeaderComponent implements OnInit, OnDestroy {
 
-  toggleCtrl = new FormControl(true);
+  toggleCtrl = new FormControl(false);
   protected sub = new Subscription();
   constructor(private themeService: ThemeService) { }
 
@@ -37,10 +37,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
     if (!themeStr) {
       return;
     }
-    const lightMode = themeStr === Theme.Light;
-    if (lightMode) {
+    const darkMode = themeStr === Theme.Dark;
+    if (darkMode) {
       setTimeout(() => {
-        this.toggleCtrl.setValue(false);
+        this.toggleCtrl.setValue(true);
       });
     }
   }

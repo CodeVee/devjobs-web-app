@@ -19,3 +19,9 @@ export interface Job {
     items: string[]
   }
 }
+
+export interface JobFilter {
+  search: string;
+  location: string;
+  fullTime: boolean;
+}

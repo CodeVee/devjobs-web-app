@@ -1,0 +1,27 @@
+<div [formGroup]="filterForm" class=" flex bg-white dark:bg-blue-vdark rounded-lg h-32">
+  <div class=" w-[46.4rem] border-r border-r-grey-dark/20 px-3.2 flex items-center">
+    <img src="assets/desktop/icon-search.svg" alt="search" class=" h-2.4 w-auto">
+    <input
+    formControlName="search"
+    type="text"
+    placeholder="Filter by title, companies, expertise…"
+    class=" bg-transparent caret-violet ml-1.6 flex-1 border-0 focus:ring-offset-0 focus:ring-transparent text-blue-vdark dark:text-white text-md leading-ms cursor-pointer">
+  </div>
+  <div class=" w-[30.1rem] px-[2.3rem]  border-r border-r-grey-dark/20  flex items-center">
+    <img src="assets/desktop/icon-location.svg" alt="location"  class=" h-2.4 w-auto">
+    <input
+    formControlName="location"
+    type="text"
+    placeholder="Filter by location…"
+    class=" bg-transparent caret-violet ml-1.6 flex-1 border-0 focus:ring-offset-0 focus:ring-transparent text-blue-vdark dark:text-white text-md leading-ms cursor-pointer">
+  </div>
+  <div class=" flex-1 pl-3.2 pr-1.6  flex items-center">
+    <input
+    formControlName="fullTime"
+    [checked]="false"
+    type="checkbox"
+    class="rounded checked:text-violet focus:ring-offset-0 focus:ring-transparent border-0 cursor-pointer bg-blue-vdark/10 dark:bg-white/10 h-2.4 w-2.4 " />
+    <span class=" font-bold text-blue-vdark dark:text-white text-md leading-ms ml-1.6 mr-10">Full Time Only</span>
+    <button (click)="search()" class=" btn-primary w-[12.3rem]">Search</button>
+  </div>
+</div>

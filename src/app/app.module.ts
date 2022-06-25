@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { JobCardComponent } from './components/job-card/job-card.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { JobCardComponent } from './components/job-card/job-card.component';
     AppRoutingModule.components,
     HeaderComponent,
     JobCardComponent,
+    SearchBarComponent,
   ],
   imports: [
     BrowserModule,

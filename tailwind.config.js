@@ -5,16 +5,10 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      'white': {
-        DEFAULT: '#ffffff',
-        low: '#ffffff1a',
-        medium: '#ffffff59',
-      },
+      'white': '#ffffff',
       'violet': {
         light: '#939bf4',
         DEFAULT: '#5964E0',
-        low: '#5964E01a',
-        medium: '#5964E059',
       },
       'blue': {
         vdark: '#19202d',
