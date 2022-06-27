@@ -46,6 +46,9 @@ module.exports = {
         4.8: '4.8rem',
         ct: '111rem',
         cm: '73rem',
+        tc: '68.9rem',
+        mc: '32.7rem',
+
       },
       borderRadius: {
         0.6: '0.6rem',

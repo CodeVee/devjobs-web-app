@@ -1,5 +1,5 @@
 <ng-container *ngIf="job">
-  <div class=" w-cm mx-auto">
+  <div class=" w-tc lg:w-cm mx-auto">
     <div class=" bg-white dark:bg-blue-vdark flex h-56 rounded-0.6 mb-3.2">
       <figure [ngStyle]="{background: job.logoBackground}" class=" h-full w-56 flex items-center justify-center rounded-tl-0.6 rounded-bl-0.6">
         <img [src]="job.logo" [alt]="job.company" class=" scale-[2]">
@@ -51,7 +51,7 @@
     </div>
   </div>
   <div class=" bg-white dark:bg-blue-vdark h-[9.6rem] mt-32">
-    <div class=" w-cm mx-auto flex justify-between items-center h-full">
+    <div class=" w-tc lg:w-cm mx-auto flex justify-between items-center h-full">
       <div>
         <h6 class=" font-bold text-lg leading-lg text-blue-vdark dark:text-white mb-1.2">{{job.position}}</h6>
         <h6 class=" font-normal text-grey-dark text-md leading-ms">{{job.company}}</h6>

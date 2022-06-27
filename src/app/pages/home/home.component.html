@@ -1,6 +1,6 @@
-<div class=" w-ct mx-auto pb-20">
+<div class=" sm:w-tc lg:w-ct mx-auto pb-20">
   <app-search-bar (filterChange)="filterJobs($event)"></app-search-bar>
-  <div class=" mt-[10.5rem] grid grid-cols-3 gap-x-12 gap-y-[6.5rem]">
+  <div class=" mt-[10.5rem] grid lg:grid-cols-3 grid-cols-2 gap-x-[1.1rem] lg:gap-x-12 gap-y-[6.5rem]">
     <app-job-card *ngFor="let job of filteredJobs" [job]="job"></app-job-card>
   </div>
   <div class=" flex justify-center mt-[5.6rem]">
