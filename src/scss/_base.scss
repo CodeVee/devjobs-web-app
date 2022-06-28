@@ -26,6 +26,19 @@ html, body {
   font-size: $fs-10;
 }
 
+.ngneat-dialog-backdrop {
+  padding: 2.4rem !important;
+}
+
+.ngneat-dialog-content {
+  min-height: auto !important;
+  background: transparent !important;
+}
+
+.ngneat-close-dialog {
+  display: none !important;
+}
+
 .marker {
   .cover {
     display: none;
