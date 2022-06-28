@@ -1,0 +1,20 @@
+<div class=" bg-white dark:bg-blue-vdark rounded-0.6">
+  <div class=" px-2.4 flex items-center gap-1.6 h-[7.2rem] border-b border-b-grey-dark/20">
+    <img src="assets/desktop/icon-location.svg" alt="location"  class=" h-2.4 w-auto">
+    <input
+    [formControl]="locationCtrl"
+    type="text"
+    placeholder="Filter by location…"
+    class=" bg-transparent caret-violet flex-1 border-0 focus:ring-offset-0 focus:ring-transparent text-blue-vdark dark:text-white text-md leading-ms cursor-pointer">
+  </div>
+  <div class="h-[14.4rem] p-2.4">
+    <div class="flex gap-1.6 items-center mb-2.4">
+      <input
+      [formControl]="fullTimeCtrl"
+      type="checkbox"
+      class="rounded checked:text-violet focus:ring-offset-0 focus:ring-transparent border-0 cursor-pointer bg-blue-vdark/10 dark:bg-white/10 h-2.4 w-2.4 " />
+      <span class=" font-bold text-blue-vdark dark:text-white text-md leading-ms ml-1.6 mr-10">Full Time Only</span>
+    </div>
+    <button (click)="search()" class=" btn-primary w-full">Search</button>
+  </div>
+</div>

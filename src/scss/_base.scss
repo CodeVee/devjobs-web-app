@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply h-4.8 rounded-lg flex items-center justify-center font-bold text-md leading-ms focus:outline-none disabled:opacity-25;
+  }
+  .btn-primary {
+    @apply btn bg-violet text-white hover:bg-violet-light;
+  }
+  .btn-secondary {
+    @apply btn bg-violet/10 text-violet hover:bg-violet/[0.35];
+  }
+  .btn-secondary-dark {
+    @apply btn bg-white/10 text-white hover:bg-white/[0.35];
+  }
+
+}
+
+@import 'mixins';
+
+
+html, body {
+  font-family: $font-kumbh-sans;
+  font-size: $fs-10;
+}
+
+.ngneat-dialog-backdrop {
+  padding: 2.4rem !important;
+}
+
+.ngneat-dialog-content {
+  min-height: auto !important;
+  background: transparent !important;
+}
+
+.ngneat-close-dialog {
+  display: none !important;
+}
+
+.marker {
+  .cover {
+    display: none;
+  }
+  &:hover {
+    .idle {
+      display: none;
+    }
+    .cover {
+      display: block;
+    }
+  }
+}
+
+.toggle {
+  label::after {
+    position: absolute;
+    content: "";
+    height: 1.4rem;
+    width: 1.4rem;
+    top: .5rem;
+    background-color: $violet;
+    border-radius: 50%;
+    transition: .5s;
+  }
+
+  &:hover {
+    label::after {
+      background-color: $light-violet;
+    }
+  }
+
+  input[type="checkbox"]:checked + label, .move {
+    &::after {
+      transform: translateX(150%);
+    }
+  }
+
+}
+
+@include desktop {
+  body, html {
+    font-size: $fs-8s;
+  }
+}
+
+@include tablet-wide {
+  body, html {
+    font-size: $fs-10s;
+  }
+}
+
+@include tablet {
+  body, html {
+    font-size: $fs-10;
+  }
+}
+
+@include mobile-wide {
+  body, html {
+    font-size: $fs-11s;
+  }
+}
+
+@include mobile {
+  body, html {
+    font-size: $fs-10;
+  }
+}

@@ -1,0 +1,66 @@
+<ng-container *ngIf="job">
+  <div class=" w-mc sm:w-tc lg:w-cm mx-auto">
+    <div class=" bg-white dark:bg-blue-vdark flex flex-col sm:flex-row h-[20.5rem] sm:h-56 rounded-0.6 mb-3.2">
+      <figure [ngStyle]="{background: job.logoBackground}" class=" hidden h-full w-56 sm:flex items-center justify-center rounded-tl-0.6 rounded-bl-0.6">
+        <img [src]="job.logo" [alt]="job.company" class=" scale-[2]">
+      </figure>
+      <div class=" flex-1 pl-16 pr-[4.3rem] flex flex-col sm:flex-row items-center justify-center sm:justify-between relative">
+        <figure [ngStyle]="{background: job.logoBackground}" class=" sm:hidden absolute -top-10 h-20 w-20 rounded-3xl flex items-center justify-center">
+          <img [src]="job.logo" [alt]="job.company">
+        </figure>
+        <div class="mb-[2.7rem] sm:mb-0 text-center sm:text-left">
+          <h2 class=" text-blue-vdark dark:text-white font-bold text-lx leading-lx mb-[1.3rem]">{{job.company}}</h2>
+          <h3 class=" text-grey-dark font-normal text-md leading-ms">{{job.website}}</h3>
+        </div>
+        <a [href]="job.website" class="btn-secondary dark:btn-secondary-dark w-[14.7rem]" target="_blank">Company Site</a>
+      </div>
+    </div>
+    <div class=" bg-white dark:bg-blue-vdark py-16 px-2.4 sm:py-4.8 sm:pl-4.8 sm:pr-[4.3rem] rounded-0.6">
+      <div class="flex flex-col sm:flex-row justify-between mb-3.2 sm:mb-16">
+        <div class=" mb-[5.4rem] sm:mb-auto">
+          <div class=" text-grey-dark font-normal text-md leading-ms mb-0.8 flex">
+            <span>{{job.postedAt}}</span>
+            <span class=" mb-[0.3rem] self-end h-2 w-2 rounded-full bg-grey-dark mx-1.2"></span>
+            <span>{{job.contract}}</span>
+          </div>
+          <h4 class=" font-bold text-lg sm:text-xl leading-lg sm:leading-xl text-blue-vdark dark:text-white mb-[1.4rem]">{{job.position}}</h4>
+          <h5 class=" font-bold text-violet text-sm leading-sm">{{job.location}}</h5>
+        </div>
+        <a [href]="job.apply" target="_blank" class="btn-primary w-[14.1rem] self-center">Apply Now</a>
+      </div>
+      <p class="font-normal text-grey-dark text-md leading-md mb-16">
+        {{job.description}}
+      </p>
+      <h6 class=" font-bold text-lg leading-lg text-blue-vdark dark:text-white mb-[2.8rem]">Requirements</h6>
+      <p class="font-normal text-grey-dark text-md leading-md mb-2.4">
+        {{job.requirements.content}}
+      </p>
+      <div class=" font-normal text-grey-dark text-md leading-md mb-4.8 flex flex-col gap-y-0.8">
+        <div *ngFor="let item of job.requirements.items" class=" flex gap-3.2 min-h-[2.6rem]">
+          <span class=" mt-4 h-0.4 w-0.4 rounded-full bg-violet"></span>
+          <span class=" flex-1">{{item}}</span>
+        </div>
+      </div>
+      <h6 class=" font-bold text-lg leading-lg text-blue-vdark dark:text-white mb-[2.8rem]">What You Will Do</h6>
+      <p class="font-normal text-grey-dark text-md leading-md mb-2.4">
+        {{job.role.content}}
+      </p>
+      <div class=" font-normal text-grey-dark text-md leading-md flex flex-col gap-y-0.8">
+        <div *ngFor="let item of job.role.items; let i=index;" class=" flex gap-3.2 min-h-[2.6rem]">
+          <span class=" font-bold text-violet">{{i + 1}}</span>
+          <span>{{item}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" bg-white dark:bg-blue-vdark h-[9.6rem] mt-32">
+    <div class=" w-mc sm:w-tc lg:w-cm mx-auto flex justify-between items-center h-full">
+      <div class=" hidden sm:flex flex-col">
+        <h6 class=" font-bold text-lg leading-lg text-blue-vdark dark:text-white mb-1.2">{{job.position}}</h6>
+        <h6 class=" font-normal text-grey-dark text-md leading-ms">{{job.company}}</h6>
+      </div>
+      <a [href]="job.apply" target="_blank" class="btn-primary w-full sm:w-[14.1rem] self-center">Apply Now</a>
+    </div>
+  </div>
+</ng-container>
+
